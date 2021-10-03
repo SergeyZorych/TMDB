@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="1.7">
+    <bytecodeTargetLevel target="1.8">
       <module name="TMDB.app" target="11" />
+      <module name="TMDB.buildSrc" target="11" />
       <module name="TMDB.data" target="11" />
       <module name="TMDB.features.films.details" target="11" />
       <module name="TMDB.features.films.list" target="11" />
