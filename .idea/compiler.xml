@@ -4,6 +4,8 @@
     <bytecodeTargetLevel target="1.7">
       <module name="TMDB.app" target="11" />
       <module name="TMDB.data" target="11" />
+      <module name="TMDB.features.films.details" target="11" />
+      <module name="TMDB.features.films.list" target="11" />
       <module name="TMDB.libraries.core" target="11" />
       <module name="TMDB.libraries.design_system" target="11" />
       <module name="TMDB.libraries.navigation" target="11" />
