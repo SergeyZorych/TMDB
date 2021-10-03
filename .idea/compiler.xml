@@ -4,6 +4,11 @@
     <bytecodeTargetLevel target="1.7">
       <module name="TMDB.app" target="11" />
       <module name="TMDB.data" target="11" />
+      <module name="TMDB.libraries.core" target="11" />
+      <module name="TMDB.libraries.design_system" target="11" />
+      <module name="TMDB.libraries.navigation" target="11" />
+      <module name="TMDB.libraries.res.drawables" target="11" />
+      <module name="TMDB.libraries.res.strings" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
