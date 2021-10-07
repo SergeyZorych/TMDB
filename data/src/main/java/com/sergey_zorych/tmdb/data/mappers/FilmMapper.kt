@@ -9,15 +9,21 @@ import com.sergey_zorych.tmdb.domain.models.Film
  *
  * @author Sergey Zorych
  */
-class FilmMapper : Mapper<FilmResponse, Film> {
-    
+internal class FilmMapper : Mapper<FilmResponse, Film> {
+
     override fun toDomain(data: FilmResponse): Film {
         return Film(
             id = data.id,
             originalTitle = data.originalTitle ?: "",
             overview = data.overview ?: "",
-            posterUrl = data.posterPath ?: "",
+            posterPreviewUrl = posterPreviewUrlPart + data.posterPath,
+            posterFullSizeUrl = posterFullSizeUrlPart + data.posterPath,
             voteAverage = data.voteAverage ?: 0.0
         )
+    }
+
+    private companion object {
+        const val posterPreviewUrlPart = "https://image.tmdb.org/t/p/w500"
+        const val posterFullSizeUrlPart = "https://image.tmdb.org/t/p/original"
     }
 }

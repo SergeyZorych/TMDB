@@ -18,7 +18,6 @@ android {
         testInstrumentationRunner = TestDeps.androidJunitRunner
     }
 
-
     buildTypes {
         val apiKey: String = gradleLocalProperties(rootDir).getProperty("apiKey")
 
@@ -50,9 +49,20 @@ android {
 }
 
 dependencies {
+    implementation(project(Modules.Libraries.ResStrings))
+    implementation(project(Modules.Libraries.ResDrawables))
+    implementation(project(Modules.Libraries.DesignSystem))
+
     implementation(project(":data"))
+    implementation(project(":features:films:list"))
+    implementation(project(":features:films:details"))
 
     implementation(Deps.AppCompat)
+    implementation(Deps.Material)
     implementation(Deps.KoinAndroid)
     implementation(Deps.Timber)
+    implementation(Deps.RxAndroid)
+    implementation(Deps.RxKotlin)
+    implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
+    implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
 }

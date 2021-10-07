@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/films_list_navigation"
+    app:startDestination="@id/filmsListFragment">
+
+    <fragment
+        android:id="@+id/filmsListFragment"
+        android:name="com.sergey_zorych.tmdb.films.list.FilmsListFragment"
+        android:label="FilmsListFragment"
+        tools:layout="@layout/fragment_films_list" />
+
+</navigation>

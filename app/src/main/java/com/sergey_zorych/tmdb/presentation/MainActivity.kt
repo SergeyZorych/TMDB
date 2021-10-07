@@ -1,7 +1,7 @@
 package com.sergey_zorych.tmdb.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.sergey_zorych.tmdb.R
 
 class MainActivity : AppCompatActivity() {

@@ -11,4 +11,6 @@ dependencies {
     implementation(Deps.RxAndroid)
     implementation(Deps.Timber)
     implementation(Deps.Lifecycle)
+    implementation(Deps.Material)
+    implementation(Deps.Glide)
 }

@@ -3,11 +3,12 @@ package com.sergey_zorych.tmdb.data.di
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.sergey_zorych.tmdb.data.api_key.ApiKey
+import com.sergey_zorych.tmdb.data.interceptors.ApiKeyInterceptor
 import com.sergey_zorych.tmdb.data.sources.remote.RemoteDataSource
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
-import org.koin.java.KoinJavaComponent.getKoin
 import retrofit2.CallAdapter
 import retrofit2.Converter
 import retrofit2.Retrofit
@@ -22,15 +23,19 @@ import java.util.concurrent.TimeUnit
  */
 val remoteDataSourceModule = module {
 
-    fun provideHttpClient(): OkHttpClient {
+    fun provideApiKeyInterceptor(apiKey: ApiKey): ApiKeyInterceptor {
+        return ApiKeyInterceptor(apiKey)
+    }
+
+    fun provideHttpClient(apiKeyInterceptor: ApiKeyInterceptor): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+            .addInterceptor(apiKeyInterceptor)
             .readTimeout(120, TimeUnit.SECONDS)
             .writeTimeout(120, TimeUnit.SECONDS)
             .connectTimeout(120, TimeUnit.SECONDS)
             .build()
     }
-
 
     fun provideGson(): Gson {
         return GsonBuilder()
@@ -52,7 +57,7 @@ val remoteDataSourceModule = module {
         converterFactory: Converter.Factory
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(getKoin().getProperty<String>("API_ENDPOINT")!!)
+            .baseUrl("https://api.themoviedb.org/3/")
             .client(httpClient)
             .addCallAdapterFactory(callAdapterFactory)
             .addConverterFactory(converterFactory)
@@ -63,7 +68,8 @@ val remoteDataSourceModule = module {
         return retrofit.create(RemoteDataSource::class.java)
     }
 
-    single { provideHttpClient() }
+    single { provideApiKeyInterceptor(get()) }
+    single { provideHttpClient(get()) }
     single { provideGson() }
     single { provideConverterFactory(get()) }
     single { provideCallFactory() }

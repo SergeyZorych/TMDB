@@ -9,6 +9,7 @@ data class Film(
     val id: Int,
     val originalTitle: String,
     val overview: String,
-    val posterUrl: String,
+    val posterPreviewUrl: String,
+    val posterFullSizeUrl: String,
     val voteAverage: Double
 )
