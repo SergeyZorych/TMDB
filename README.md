@@ -52,8 +52,8 @@ Library with material components
 
 ### Gradle Kotlin DSL with buildSrc
 
-All gradle files written in Kotlin DSL
-buildSrc used for creation gradle plugin with common options and store common dependencies
+All gradle files written in Kotlin DSL and buildSrc used for creation gradle plugin with common
+options and store common dependencies
 
 [](https://docs.gradle.org/current/userguide/kotlin_dsl.html)
 
@@ -62,7 +62,7 @@ buildSrc used for creation gradle plugin with common options and store common de
 Add your api key in local.properties in the following format:
 
 ```kotlin
-apiKey="your api key"
+apiKey = "your api key"
 ```
 
 And run debug or release build
