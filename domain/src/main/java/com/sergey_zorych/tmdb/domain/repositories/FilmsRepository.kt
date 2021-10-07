@@ -6,11 +6,22 @@ import io.reactivex.Single
 /**
  * Created by Android Studio on 10/3/21 11:12 PM
  *
+ * Interface to represent the implementation of [Film] repository.
+ *
  * @author Sergey Zorych
  */
 interface FilmsRepository {
 
+    /**
+     * Get list of films by page
+     * @param page number of page
+     * @see Film
+     */
     fun getFilms(page: Int): Single<List<Film>>
 
+    /**
+     * Get film by id
+     * @param id unique id of film
+     */
     fun getFilm(id: Int): Single<Film>
 }
