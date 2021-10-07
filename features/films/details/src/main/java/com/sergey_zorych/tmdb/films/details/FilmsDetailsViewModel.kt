@@ -11,7 +11,7 @@ import com.sergey_zorych.tmdb.domain.repositories.FilmsRepository
  *
  * @author Sergey Zorych
  */
-class FilmsDetailsViewModel(
+internal class FilmsDetailsViewModel(
     private val filmsRepository: FilmsRepository,
     private val filmId: Int
 ) : BaseViewModel() {
