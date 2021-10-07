@@ -15,7 +15,7 @@ import org.koin.core.parameter.parametersOf
  *
  * @author Sergey Zorych
  */
-class FilmsDetailsFragment :
+internal class FilmsDetailsFragment :
     BaseVMFragment<FragmentFilmsDetailsBinding, FilmsDetailsViewModel>(R.layout.fragment_films_details) {
 
     override val binding: FragmentFilmsDetailsBinding by viewBinding()

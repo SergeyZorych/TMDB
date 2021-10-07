@@ -1,5 +1,6 @@
 plugins {
     id(Plugins.AndroidModule)
+    id(Plugins.Kapt)
 }
 
 enableViewBinding()
@@ -13,4 +14,5 @@ dependencies {
     implementation(Deps.Lifecycle)
     implementation(Deps.Material)
     implementation(Deps.Glide)
+    kapt(Deps.GlideCompiler)
 }
