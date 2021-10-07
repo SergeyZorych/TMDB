@@ -3,5 +3,6 @@ plugins {
 }
 
 dependencies {
-
+    implementation(Deps.NavComponent)
+    implementation(Deps.FragmentKTX)
 }

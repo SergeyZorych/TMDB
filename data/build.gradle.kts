@@ -3,5 +3,11 @@ plugins {
 }
 
 dependencies {
+    implementation(project(Modules.Domain))
 
+    implementation(Deps.RxKotlin)
+    implementation(Deps.OkHttp)
+    implementation(Deps.Retrofit)
+    implementation(Deps.Gson)
+    implementation(Deps.KoinAndroid)
 }
