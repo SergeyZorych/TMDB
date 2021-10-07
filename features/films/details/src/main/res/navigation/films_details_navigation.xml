@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/films_details_navigation"
+    app:startDestination="@id/filmsDetailsFragment">
+
+    <fragment
+        android:id="@+id/filmsDetailsFragment"
+        android:name="com.sergey_zorych.tmdb.films.details.FilmsDetailsFragment"
+        android:label="FilmsDetailsFragment"
+        tools:layout="@layout/fragment_films_details">
+
+        <deepLink app:uri="android-app://com.sergey_zorych.tmdb/details?filmId={filmId}" />
+
+        <argument
+            android:name="filmId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>
