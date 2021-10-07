@@ -7,6 +7,8 @@ import okhttp3.Response
 /**
  * Created by Android Studio on 10/5/21 3:35 PM
  *
+ * Interceptor that add api key to every HTTP request
+ *
  * @author Sergey Zorych
  */
 class ApiKeyInterceptor(

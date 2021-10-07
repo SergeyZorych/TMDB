@@ -22,6 +22,9 @@ class Application : Application() {
         initTimber()
     }
 
+    /**
+     * Init koin dependency injection
+     */
     private fun initKoin() {
         startKoin {
             androidLogger(Level.ERROR)
@@ -30,6 +33,9 @@ class Application : Application() {
         }
     }
 
+    /**
+     * Init timber for logs
+     */
     private fun initTimber() {
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())

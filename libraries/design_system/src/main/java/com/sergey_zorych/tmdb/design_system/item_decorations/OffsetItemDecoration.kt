@@ -6,9 +6,9 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
 /**
- *  Created by Android Studio on 8/11/2020 11:09 PM
- *  Developer: Sergey Zorych
- *  Project: One Click
+ * Created by Android Studio on 8/11/2020 11:09 PM
+ *
+ * @author Sergey Zorych
  */
 
 class OffsetItemDecoration(

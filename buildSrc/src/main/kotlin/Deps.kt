@@ -95,10 +95,8 @@ object Deps {
     const val KoinCore = "io.insert-koin:koin-core:${Versions.koin}"
     const val KoinAndroid = "io.insert-koin:koin-android:${Versions.koin}"
 
-    val Glide = listOf(
-        "com.github.bumptech.glide:glide:${Versions.glide}",
-        "com.github.bumptech.glide:compiler:${Versions.glide}"
-    )
+    const val Glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+    const val GlideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
 
     const val ViewBindingDelegate =
         "com.github.kirich1409:viewbindingpropertydelegate:${Versions.viewBindingDelegate}"

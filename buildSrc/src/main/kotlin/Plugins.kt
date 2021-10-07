@@ -10,4 +10,6 @@ object Plugins {
     const val SafeArgs = "androidx.navigation.safeargs.kotlin"
 
     const val Parcelize = "kotlin-parcelize"
+
+    const val Kapt = "kotlin-kapt"
 }
