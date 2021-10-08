@@ -1,61 +1,26 @@
-# TMDB Application with Clean Architecture
+# TMDB Application with Clean Architecture and modularization
 
 ## **Current Stack**
 
-### Kotlin
+### [Kotlin](https://kotlinlang.org/docs/home.html)
 
-Whole project written in Kotlin.
+### [MVVM](https://developer.android.com/jetpack/guide?gclid=CjwKCAjwtdeFBhBAEiwAKOIy50TjRzAeb73n0bcAYvmrDgJ0-umR-srP69RQVqPyR97T9IU_uV6nIxoCV8wQAvD_BwE&gclsrc=aw.ds)
 
-[Kotlin docs | Kotlin](https://kotlinlang.org/docs/home.html)
+### [Clean Architecture](https://medium.com/android-dev-hacks/detailed-guide-on-android-clean-architecture-9eab262a9011)
 
-### MVVM
+### [Navigation Component](https://developer.android.com/guide/navigation)
 
-Architecture pattern in presentation layer (features modules)
+### [RxKotlin](https://github.com/ReactiveX/RxKotlin)
 
-[](https://developer.android.com/jetpack/guide?gclid=CjwKCAjwtdeFBhBAEiwAKOIy50TjRzAeb73n0bcAYvmrDgJ0-umR-srP69RQVqPyR97T9IU_uV6nIxoCV8wQAvD_BwE&gclsrc=aw.ds)
+### [ViewBinding](https://developer.android.com/topic/libraries/view-binding)
 
-### Clean Architecture
+### [ViewBindingPropertyDelegate](https://github.com/androidbroadcast/ViewBindingPropertyDelegate)
 
-Use "Clean architecture" for creation three independent layer: data, domain, presentation
+### [Koin](https://insert-koin.io/)
 
-[Detailed Guide on Android Clean Architecture](https://medium.com/android-dev-hacks/detailed-guide-on-android-clean-architecture-9eab262a9011)
+### [Material](https://material.io/)
 
-### Navigation Component
-
-Library from Android Jetpack for navigation
-
-[](https://developer.android.com/guide/navigation)
-
-### RxKotlin
-
-Library for asynchronous operation
-
-[ReactiveX/RxKotlin](https://github.com/ReactiveX/RxKotlin)
-
-### ViewBinding
-
-Generate binding classes for interacts with views
-
-[](https://developer.android.com/topic/libraries/view-binding)
-
-### Koin
-
-Service locator for dependency injection
-
-[Koin - The Kotlin Injection Framework | Koin](https://insert-koin.io/)
-
-### Material
-
-Library with material components
-
-[Material Design](https://material.io/)
-
-### Gradle Kotlin DSL with buildSrc
-
-All gradle files written in Kotlin DSL and buildSrc used for creation gradle plugin with common
-options and store common dependencies
-
-[](https://docs.gradle.org/current/userguide/kotlin_dsl.html)
+### [Gradle Kotlin DSL with buildSrc](https://docs.gradle.org/current/userguide/kotlin_dsl.html)
 
 ## How to start
 
