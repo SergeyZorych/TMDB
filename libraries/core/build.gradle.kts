@@ -16,3 +16,6 @@ dependencies {
     implementation(Deps.Glide)
     kapt(Deps.GlideCompiler)
 }
+android {
+    namespace = "com.sergey_zorych.tmdb.core"
+}

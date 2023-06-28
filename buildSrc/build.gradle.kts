@@ -22,7 +22,7 @@ buildscript {
     }
 
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21")
     }
 }
 
@@ -37,8 +37,8 @@ compileKotlin.kotlinOptions {
 }
 
 dependencies {
-    implementation("com.android.tools.build:gradle:7.0.2")
-    implementation("com.android.tools.build:gradle-api:7.0.2")
+    implementation("com.android.tools.build:gradle:7.4.2")
+    implementation("com.android.tools.build:gradle-api:7.4.2")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21")
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21")
 }
