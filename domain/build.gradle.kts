@@ -1,11 +1,9 @@
 plugins {
-    id("java-library")
-    id("kotlin")
+    id(Plugins.AndroidModule)
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+android {
+    namespace = "com.sergey_zorych.tmdb.domain"
 }
 
 dependencies {

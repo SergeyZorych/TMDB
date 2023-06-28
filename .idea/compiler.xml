@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="1.8">
-      <module name="build-logic.convention" target="17" />
-      <module name="build-logic.convention.main" target="17" />
-      <module name="build-logic.convention.test" target="17" />
-      <module name="TMDB.app" target="17" />
-      <module name="TMDB.buildSrc" target="17" />
-      <module name="TMDB.buildSrc.main" target="17" />
-      <module name="TMDB.buildSrc.test" target="17" />
-      <module name="TMDB.data" target="17" />
-      <module name="TMDB.features.films.details" target="17" />
-      <module name="TMDB.features.films.list" target="17" />
-      <module name="TMDB.libraries.core" target="17" />
-      <module name="TMDB.libraries.design_system" target="17" />
-      <module name="TMDB.libraries.navigation" target="17" />
-      <module name="TMDB.libraries.res.drawables" target="17" />
-      <module name="TMDB.libraries.res.strings" target="17" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="17" />
   </component>
 </project>
