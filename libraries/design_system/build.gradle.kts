@@ -5,3 +5,6 @@ plugins {
 dependencies {
     implementation(Deps.Material)
 }
+android {
+    namespace = "com.sergey_zorych.tmdb.design_system"
+}

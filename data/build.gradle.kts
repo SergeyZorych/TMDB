@@ -11,3 +11,6 @@ dependencies {
     implementation(Deps.Gson)
     implementation(Deps.KoinAndroid)
 }
+android {
+    namespace = "com.sergey_zorych.tmdb.data"
+}

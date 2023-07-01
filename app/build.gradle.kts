@@ -46,6 +46,7 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    namespace = "com.sergey_zorych.tmdb"
 }
 
 dependencies {

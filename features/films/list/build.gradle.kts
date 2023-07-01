@@ -20,3 +20,6 @@ dependencies {
     implementation(Deps.RxAndroid)
     implementation(Deps.Glide)
 }
+android {
+    namespace = "com.sergey_zorych.tmdb.films.list"
+}

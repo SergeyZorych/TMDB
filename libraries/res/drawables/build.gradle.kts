@@ -5,3 +5,6 @@ plugins {
 dependencies {
 
 }
+android {
+    namespace = "com.sergey_zorych.tmdb.drawables"
+}

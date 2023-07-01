@@ -19,3 +19,6 @@ dependencies {
     implementation(Deps.ViewBindingDelegate)
     implementation(Deps.Glide)
 }
+android {
+    namespace = "com.sergey_zorych.tmdb.films.details"
+}
