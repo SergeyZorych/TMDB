@@ -26,7 +26,7 @@ abstract class BaseViewModel : ViewModel() {
     private val _showMessage = EventMutableLiveData<String>()
     val showMessage: EventLiveData<String> = _showMessage
 
-    private val _showMessageRes = EventMutableLiveData<@StringRes Int>()
+    private val _showMessageRes = EventMutableLiveData<Int>()
     val showMessageRes: EventLiveData<Int> = _showMessageRes
 
     private val _progressEvent = MutableLiveData<ProgressVisibilityEvent>()

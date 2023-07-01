@@ -17,11 +17,11 @@ interface FilmsRepository {
      * @param page number of page
      * @see Film
      */
-    fun getFilms(page: Int): Single<List<Film>>
+    suspend fun getFilms(page: Int): List<Film>
 
     /**
      * Get film by id
      * @param id unique id of film
      */
-    fun getFilm(id: Int): Single<Film>
+    suspend fun getFilm(id: Int): Film
 }

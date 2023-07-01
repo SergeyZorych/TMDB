@@ -2,9 +2,11 @@ package com.sergey_zorych.tmdb.films.details
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.sergey_zorych.tmdb.core.view_model.BaseViewModel
 import com.sergey_zorych.tmdb.domain.models.Film
 import com.sergey_zorych.tmdb.domain.repositories.FilmsRepository
+import kotlinx.coroutines.launch
 
 /**
  * Created by Android Studio on 10/7/21 12:33 PM
@@ -23,9 +25,8 @@ internal class FilmsDetailsViewModel(
         getFilm()
     }
 
-    private fun getFilm() {
-        filmsRepository.getFilm(filmId).await{
-            _film.postValue(it)
-        }
+    private fun getFilm() = viewModelScope.launch{
+        val film = filmsRepository.getFilm(filmId)
+        _film.postValue(film)
     }
 }
