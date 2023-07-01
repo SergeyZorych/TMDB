@@ -15,12 +15,12 @@ import retrofit2.http.Query
 interface RemoteDataSource {
 
     @GET("discover/movie")
-    fun getFilms(
+    suspend fun getFilms(
         @Query("page") page: Int
-    ): Single<ListResponse<FilmResponse>>
+    ): ListResponse<FilmResponse>
 
     @GET("movie/{id}")
-    fun getFilm(
+    suspend fun getFilm(
         @Path("id") id: Int
-    ): Single<FilmResponse>
+    ): FilmResponse
 }

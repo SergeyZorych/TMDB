@@ -6,9 +6,9 @@
 object BuildPlugins {
 
     object Versions {
-        const val kotlin = "1.5.31"
-        const val buildToolsVersion = "7.0.2"
-        const val safeArgs = "2.3.5"
+        const val kotlin = "1.8.21"
+        const val buildToolsVersion = "8.0.2"
+        const val safeArgs = "2.5.0"
     }
 
     const val androidGradlePlugin = "com.android.tools.build:gradle:${Versions.buildToolsVersion}"
