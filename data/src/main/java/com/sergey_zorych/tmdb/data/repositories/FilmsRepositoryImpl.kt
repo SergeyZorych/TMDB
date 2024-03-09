@@ -5,7 +5,7 @@ import com.sergey_zorych.tmdb.data.responses.FilmResponse
 import com.sergey_zorych.tmdb.data.sources.remote.RemoteDataSource
 import com.sergey_zorych.tmdb.domain.models.Film
 import com.sergey_zorych.tmdb.domain.repositories.FilmsRepository
-import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 
 /**
@@ -15,15 +15,16 @@ import kotlinx.coroutines.withContext
  */
 class FilmsRepositoryImpl(
     private val remoteDataSource: RemoteDataSource,
-    private val mapper: Mapper<FilmResponse, Film>
+    private val mapper: Mapper<FilmResponse, Film>,
+    private val dispatcher: CoroutineDispatcher
 ) : FilmsRepository {
 
-    override suspend fun getFilms(page: Int): List<Film> = withContext(Dispatchers.IO) {
+    override suspend fun getFilms(page: Int): List<Film> = withContext(dispatcher) {
         val response = remoteDataSource.getFilms(page).results ?: emptyList()
         return@withContext response.map(mapper::toDomain)
     }
 
-    override suspend fun getFilm(id: Int): Film = withContext(Dispatchers.IO) {
+    override suspend fun getFilm(id: Int): Film = withContext(dispatcher) {
         val response = remoteDataSource.getFilm(id)
         return@withContext mapper.toDomain(response)
     }

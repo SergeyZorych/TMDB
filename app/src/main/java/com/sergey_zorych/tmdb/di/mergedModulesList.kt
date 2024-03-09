@@ -1,5 +1,6 @@
 package com.sergey_zorych.tmdb.di
 
+import com.sergey_zorych.tmdb.data.di.dispatcherModule
 import com.sergey_zorych.tmdb.data.di.mappersModule
 import com.sergey_zorych.tmdb.data.di.remoteDataSourceModule
 import com.sergey_zorych.tmdb.data.di.repositoriesModule
@@ -23,4 +24,6 @@ val mergedModulesList = remoteDataSourceModule +
 
         featureModules +
 
-        apiKeyModule
+        apiKeyModule +
+
+        dispatcherModule
